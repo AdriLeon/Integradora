@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FUMADORES ANONIMOS: LOGIN</title>
+    <link rel="stylesheet" href="login_style.css">
+</head>
+<body>
+   <div class="hero">
+       <div class="form-box">
+           <div class="button-box">
+               <div id="btn"></div>
+               <button type="button" class="toggle-btn" onclick="login()">Iniciar sesión</button>
+               <button type="button" class="toggle-btn"onclick="registre()">Registrarse</button>
+           </div>
+           
+           <center><img src="../img/FA.png" width=25%></center>
+           
+           <form id="login" class="input-group" action="valid.php" method="post">
+               <input name="Usuario" type="text" class="input-field" placeholder="Usuario" required>
+               <input name="Contrasena" type="password" class="input-field" placeholder="Contraseña" required>
+               <input name="" type="checkbox" class="check-box"><span>Recordar Contraeña</span>
+               <button type="submit" class="submit-btn">Iniciar Sesión</button>
+           </form>
+
+           <form id="registre" class="input-group" action="Conector.php" method="post">
+               <input name="Nombre" type="text" class="input-field" placeholder="Nombre Completo" required>
+               <input name="Usuario" type="text" class="input-field" placeholder="Usuario" required>
+               <input name="Correo" type="email" class="input-field" placeholder="E-mail" required>
+               <input name="Contrasena" type="text" class="input-field" placeholder="Contraseña" required>
+               <input name="Fecha_Nac" type="date" class="input-field" placeholder="Fecha de nacimiento" required>
+               <input name="Ciudad" type="" class="input-field" placeholder="Ciudad">
+               <input name="" type="checkbox" class="check-box"><span>Estoy de acuerdo con los terminos y condiciones.</span>
+               <button type="submit" class="submit-btn">Registrar</button>
+           </form>
+       </div>
+   </div>
+   
+   <script>
+    var  x = document.getElementById("login");
+    var  y = document.getElementById("registre");
+    var  z = document.getElementById("btn");   
+    
+    function registre(){
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+    }   
+       
+    function login(){
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0px";
+    }      
+    
+    </script>
+   
+    
+</body>
+</html>

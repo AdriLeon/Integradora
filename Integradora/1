@@ -1,0 +1,49 @@
+CREATE TABLE Editorial(
+Codigo  char(6) primary key,
+Nombre varchar(50) not null,
+Pais varchar(20) not null,
+Descripcion varchar(100) null);
+
+insert into Editorial(Codigo, Nombre, Pais, Descripcion) values
+('EDIT01','Königshausen & Neumann','Alemania','Editorial de origen Alemana'),
+('EDIT02','Casterman','Belgica','Editorial de origen Belga'),
+('EDIT03','Uqbar Editores','Chile','Editorial de origen Chilena'),
+('EDIT04','Unibiblos','Colombia','Editorial de origen Colombiana'),
+('EDIT05','Vocento‎','España','Editorial de origen Española'),
+('EDIT06','Champ libre','Francia','Editorial de origen Francesa'),
+('EDIT07','Castelvecchi','Italia','Editorial de origen Italiana'),
+('EDIT08','Nostra Ediciones','Mexico','Editorial de origen Mexicana'),
+('EDIT09','Naúka','URSS','Editorial de origen Soviatico'),
+('EDIT10','Albert Bonniers Förlag','Suecia','Editorial de origen Sueco');
+
+
+ALTER TABLE Editorial ADD Codigo_Editorial char(10) after Codigo;
+
+DROP PROCEDURE IF EXISTS Cod_Editorial;
+DELIMITER //
+CREATE PROCEDURE Code_Editorial()
+BEGIN
+    DECLARE CodigoID char(6);
+    DECLARE resultadofinal integer default 0;
+    declare cursor_cod cursor for select Codigo from Editorial;
+    declare continue handler for not found set resultadofinal = 1;
+    open cursor_cod;
+    ciclo_cod: loop
+    Fetch cursor_cod into CodigoID;
+    if resultadofinal = 1 then
+    leave ciclo_cod;
+    end if;
+    update Editorial set Codigo_Editorial = concat(substring(Editorial.Codigo,1,2), substring(Editorial.Pais, 1, 3), substring(Editorial.Nombre, 1, 3), substring(Editorial.Codigo, 5,2)) where Codigo = CodigoID;
+    END loop ciclo_cod;
+    close cursor_cod;
+    END
+//
+DELIMITER ;
+
+CALL Cod_Editorial;
+
+
+1-2 codigo
+3-5 pais
+6-8 nombre
+9-10 codigo num
