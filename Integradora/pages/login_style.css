@@ -23,6 +23,9 @@
     background: #fff;
     padding: 5px;
     overflow: hidden;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    opacity: 90%;
 }
 
 .button-box{
@@ -31,6 +34,7 @@
     position: relative;
     box-shadow: 0 0 20px 9px #00000020;
     border-radius: 30px;
+    
 }
 
 .toggle-btn{
@@ -50,7 +54,7 @@
     height: 100%;
     background: linear-gradient(to right, #ff105f, #ffad06);
     border-radius: 30px;
-    transition: .5s;
+    transition: .7s;
 }
 
 .input-group{

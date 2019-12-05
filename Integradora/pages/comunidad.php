@@ -19,70 +19,18 @@
             </div>
             <div class="enlaces uno" id="enlaces">
                 <a href="#home">INICIO</a>
-                <a href="#ventaja">BENEFICIOS</a>
-                <a href="#tabaco">PROBLEMAS CON EL TABACO</a>
+                <a href="#seguimiento">SEGUIMIENTO</a>
+                <a href="#comunidad">COMUNIDAD</a>
                 <a href="#about">SOBRE NOSOTROS</a>
             </div>
         </nav>
         <div class="textos">
-            <h1>FUMADORES ANONIMOS</h1>
-            <h2>"Para una vida sin tabaco."</h2>
+            <h1>COMUNIDAD</h1>
+            <h2>Siempre hay alguien que nos pueda ayudar.</h2>
         </div>
     </header>
 
     <script src="../js/menu_main.js"></script>
-    
-    
-    <main class="main" id="ventaja">
-        <div class="contenedor">
-        <section class="info">
-            <article class="info__columna1">
-                <img src="../img/tabaco_afiche.png" alt="" class="info__img">
-                <h2 class="info__titulo">20 minutos.</h2>
-                <p class="info__txt">Mejora la circulación periférica, la presión arterial y la frecuencia cardiaca.</p>
-            </article>
-            <article class="info__columna2">
-                <img src="../img/tabaco_afiche1.png" alt="" class="info__img">
-                <h2 class="info__titulo">48 horas.</h2>
-                <p class="info__txt">Se normaliza el monóxido de carbono en sangre y toda la nicotina es eliminada. Mejora el olfato, el gusto y el aspecto de la piel.</p>
-            </article>
-            <article class="info__columna3">
-                <img src="../img/tabaco_afiche2.png" alt="" class="info__img">
-                <h2 class="info__titulo">72 horas.</h2>
-                <p class="info__txt">Se normaliza la función respiratoria.</p>
-            </article>
-        </section>
-        <section class="info">
-            <article class="info__columna4">
-                <img src="../img/tabaco_afiche3.png" alt="" class="info__img">
-                <h2 class="info__titulo">6 meses.</h2>
-                <p class="info__txt">Se reduce los catarros, los resfrios, las bronquitis y las molestias de garganta.</p>
-            </article>
-            <article class="info__columna5">
-                <img src="../img/tabaco_afiche4.png" alt="" class="info__img">
-                <h2 class="info__titulo">1 año después.</h2>
-                <p class="info__txt">Se reduce a la mitad el riesgo de infarto y es menos el riesgo de trombosis o embolias cerebrales.</p>
-            </article>
-            <article class="info__columna6">
-                <img src="../img/tabaco_afiche5.png" alt="" class="info__img">
-                <h2 class="info__titulo">3/4 años después.</h2>
-                <p class="info__txt">El riesgo de padecer enfermedades del corazón se equiparan al de los que nunca fumaron.</p>
-            </article>
-        </section>
-        <section class="info">
-            <article class="info__columna7">
-                <img src="../img/tabaco_afiche6.png" alt="" class="info__img">
-                <h2 class="info__titulo">10 años después.</h2>
-                <p class="info__txt">El riesgo de padecer cáncer de pulmón se iguala al de los NO fumadores. Lo mismo sucede con el riesgo de un accidente cerebro vascular.</p>
-            </article>
-            <article class="info__columna8">
-                <img src="../img/tabaco_afiche7.png" alt="" class="info__img">
-                <h2 class="info__titulo">10/15 años después.</h2>
-                <p class="info__txt">El riesgo de muerte del ex-fumador llega a equipararse al de NO fumador.</p>
-            </article>
-        </section>
-        </div>
-    </main>
     
     
     <article class="tabaco-area" id="tabaco">
@@ -98,13 +46,6 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore dolore quia corporis natus ipsum, optio itaque odit ad asperiores ea saepe iure consequuntur quaerat corrupti. Rem consequatur aspernatur, enim nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo maxime omnis, voluptate aspernatur, alias laborum expedita, porro quod est iure ipsa ab. Aspernatur harum, obcaecati neque vero id excepturi nihil.</p>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/4TEVlx7S2Jo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore dolore quia corporis natus ipsum, optio itaque odit ad asperiores ea saepe iure consequuntur quaerat corrupti. Rem consequatur aspernatur, enim nulla. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo maxime omnis, voluptate aspernatur, alias laborum expedita, porro quod est iure ipsa ab. Aspernatur harum, obcaecati neque vero id excepturi nihil.</p>
-        </div>
-    </article>
-    <article class="about-area" id="about">
-        <div class="text-part">
-            <h1>SOBRE NOSOTROS</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sunt est illum distinctio sit eum, ipsam consectetur consequatur corporis nostrum esse quo id delectus et veritatis nam libero mollitia quasi?
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum distinctio blanditiis vel enim asperiores atque ea, ratione. Est hic sapiente quaerat. Asperiores cum officiis labore vitae, minus nostrum rerum neque.</p>
         </div>
     </article>
 </body>

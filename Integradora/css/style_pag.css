@@ -18,11 +18,20 @@ nav{
 
 body {
     font-family: 'Courier New';
-    font-size: 20px;
+    font-size: 18px;
 }
 
-header {
+header{
     background-image: url("../img/rdt.jpg");
+    width: 100%;
+    height: 700px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.tobacco{
+    background-image: url("../img/tobacco.jfif");
     width: 100%;
     height: 700px;
     background-size: cover;
@@ -44,6 +53,9 @@ nav{
 
 .icono {
     display: none;
+}
+.icon-menu:before {
+  content: "\e9bd";
 }
 
 .enlaces {
@@ -87,19 +99,19 @@ nav .logo img {
 header .textos {
     text-align: center;
     color: #fff;
-    margin-top: 150px;
+    margin-top: 300px;
 }
 
 header .textos h1 {
-    font-size: 95px;
+    font-size: 70px;
     letter-spacing: 3px;
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 header .textos h2 {
-    font-size: 30px;
-    font-weight: 600;
+    font-size: 25px;
+    font-weight: 6;
 }
 
 @media screen and (max-width:750px) {
@@ -124,7 +136,7 @@ header .textos h2 {
         position: fixed;
         height: 100vh;
         right: 0;
-        width: 100%;
+        width: 50%;
         flex-direction: column;
         transition: all 1s ease;
         background: #f46b45;
@@ -160,34 +172,12 @@ header .textos h2 {
     }
 
     header .textos h1 {
-        font-size: 65px;
+        font-size: 60px;
     }
 }
 
-/*
-.texto {
-    color: #fff;
-    padding: 80px 0;
-    text-align: center;
-    font-weight: 400;
-}
+/* CONTENIDO*/
 
-.texto h2, .texto p{
-    background: rgba(0,0,0,.8);
-    display: inline-block;
-    padding: 10px 20px;
-}
-
-.texto h2{
-    font-size: 40px;
-    letter-spacing: 2.5;
-    font-weight: normal;
-}
-
-.texto p{
-    font-size: 20px;
-    letter-spacing: 2.5;
-}
 
 .contenedor{
     width: 99%;
@@ -200,7 +190,6 @@ header .textos h2 {
 
 .Principal article{
     padding: 20px;
-    background: rgba(255, 255, 255, 0.85);
     margin-bottom: 20px;
     border-radius: 20px;
 }
@@ -209,7 +198,6 @@ header .textos h2 {
     font-family: 'Courier New', sans-serif;
     text-align: center;
 }
-*/
 
 .tabaco-area, .about-area{
     position: relative;
@@ -220,7 +208,6 @@ header .textos h2 {
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 2550px;
 }
 
 iframe{
@@ -263,12 +250,12 @@ html{
 
 .info__columna1, .info__columna2, .info__columna3, .info__columna4, .info__columna5, .info__columna6, .info__columna7, .info__columna8{
      color: #FFF;
-    padding: 15px;
-    margin-bottom: 30px;
+    padding: 0px;
+
 }
 
 .info__columna1{
-    background: #BBDEFB;
+    background: #8FF0FE;
 }
 
 .info__columna2{
@@ -328,7 +315,7 @@ html{
     }
     
     .info__columna1, .info__columna2, .info__columna3, .info__columna4, .info__columna5, .info__columna6, .info__columna7, .info__columna8{
-        width: 32%;
+        width: 30%;
         margin: 50px;
     }
     
@@ -336,4 +323,23 @@ html{
         font-size: 25px;
         margin: 5px 0;
     }
+    
+    .info__txt{
+        font-size: 18px;
+        margin: 5px 0;
+    }
+}
+
+.conoce{
+    padding: 1rem 1rem;
+    border: 1px solid #007bff;
+    border-radius: .25rem;
+    color: #007bff;
+    transition: color .15s ease-in-out,
+        background-color .15s ease-in-out;
+}
+
+.conoce:hover, .conoce:active, conoce:focus{
+    color:#fff;
+    background-color: #007bff;
 }
