@@ -1,30 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Fumadores Anonimos: Inicio</title>
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link rel="stylesheet" href="https://use.typekit.net/gnx3vvs.css">
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Sider Menu Bar CSS</title>
     <link rel="stylesheet" href="../css/style_pag.css">
-    <link rel="stylesheet" href="../fonts/style.css">
-</head>
-<body>
-    <header id="home">
-        <nav>
-            <div class="logo">
-                <h1>FUMADORES ANONIMOS</h1>
-            </div>
-            <div class="icono" id="icono">
-                <span class="icon-menu"></span>
-            </div>
-            <div class="enlaces uno" id="enlaces">
-                <a href="#home">INICIO</a>
-                <a href="#ventaja">BENEFICIOS</a>
-                <a href="#tabaco">PROBLEMAS CON EL TABACO</a>
-                <a href="#about">SOBRE NOSOTROS</a>
-            </div>
-        </nav>
-        <div class="textos">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+   <!-- DISEÑO DE UN MENU DESPLEGABLE -->
+    <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header>MENU</header>
+  <ul>
+    <li><a href="#home"><i class="fas fa-qrcode"></i>INICIO</a></li>
+    <li><a href="#ventaja"><i class="fas fa-link"></i>BENEFICIOS</a></li>
+    <li><a href="#tabaco"><i class="fas fa-smoking"></i>EL TABACO</a></li>
+    <li><a href="#about"><i class="fas fa-users"></i>SOBRE NOSOTROS</a></li>
+    <li><a href="login.html"><i class="fas fa-user"></i>INICIA SESION</a></li>
+  </ul>
+</div>
+<!-- FIN MENU -->
+ <header id="home">
+ <div class="textos">
             <h1>FUMADORES ANONIMOS</h1>
             <h2>"Para una vida sin tabaco."</h2>
         </div>
@@ -107,5 +108,7 @@
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum distinctio blanditiis vel enim asperiores atque ea, ratione. Est hic sapiente quaerat. Asperiores cum officiis labore vitae, minus nostrum rerum neque.</p>
         </div>
     </article>
-</body>
+ 
+ 
+  </body>
 </html>

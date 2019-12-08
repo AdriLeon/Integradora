@@ -1,14 +1,95 @@
-nav{
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: #FFF;
-    width: 100%;
-    height: 70px;
-    z-index: 1;
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
 }
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.sidebar {
+  position: fixed;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: #fff;
+  transition: all .5s ease;
+}
+.sidebar header {
+  font-size: 50px;
+  color: black;
+  line-height: 70px;
+  text-align: center;
+  background: #fff;
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: black;
+  padding-left: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 40px;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel, label #btn_user{
+  position: fixed;
+  background: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+}
+label #btn{
+  left: 40px;
+  top: 25px;
+  font-size: 35px;
+  color: black;
+  padding: 6px 12px;
+  transition: all .5s;
+}
+
+label #cancel{
+  z-index: 1111;
+  left: -195px;
+  top: 17px;
+  font-size: 30px;
+  color: #000;
+  padding: 4px 9px;
+  transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  left: 250px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+  left: 200px;
+}
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
+
+
+
+
 
 * {
     margin: 0;
@@ -20,8 +101,7 @@ body {
     font-family: 'Courier New';
     font-size: 18px;
 }
-
-header{
+#home{
     background-image: url("../img/rdt.jpg");
     width: 100%;
     height: 700px;
@@ -39,24 +119,12 @@ header{
     overflow: hidden;
 }
 
-header nav {
-    height: 70px;
-    background: #fff;
-    display: flex;
-    justify-content: space-between;
-}
 
 nav{
     position: fixed;
     width: 100%;
 }
 
-.icono {
-    display: none;
-}
-.icon-menu:before {
-  content: "\e9bd";
-}
 
 .enlaces {
     display: flex;
@@ -179,10 +247,6 @@ header .textos h2 {
 /* CONTENIDO*/
 
 
-.contenedor{
-    width: 99%;
-}
-
 .Principal{
     position: relative;
     color:#000;
@@ -200,7 +264,7 @@ header .textos h2 {
 }
 
 .tabaco-area, .about-area{
-    position: relative;
+    position: inherit;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
@@ -335,8 +399,8 @@ html{
     border: 1px solid #007bff;
     border-radius: .25rem;
     color: #007bff;
-    transition: color .15s ease-in-out,
-        background-color .15s ease-in-out;
+    transition: color .15s ease-in-out;
+    background-color: .15s ease-in-out;
 }
 
 .conoce:hover, .conoce:active, conoce:focus{
