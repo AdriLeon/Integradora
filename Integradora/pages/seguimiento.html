@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fumadores Anonimos: Seguimiento</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.typekit.net/gnx3vvs.css">
+    <link rel="stylesheet" href="../css/style_pag.css">
+    <link rel="stylesheet" href="../fonts/style.css">
+    <link rel="stylesheet" href="style_prueba.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/calendar.min.js"></script>
+		<script src="js/jquery.colorbox-min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700' rel='stylesheet' type='text/css'>
+		<link href="css/calendar.min.css" rel="stylesheet">
+		<link href="css/colorbox.css" rel="stylesheet">
+</head>
+<body>
+    <header id="home">
+            <input type="checkbox" id="check">
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header>MENU</header>
+  <ul>
+    <li><a href="#home"><i class="fas fa-qrcode"></i>INICIO</a></li>
+    <li><a href="#ventaja"><i class="fas fa-heartbeat"></i>BENEFICIOS</a></li>
+    <li><a href="#tabaco"><i class="fas fa-smoking"></i>EL TABACO</a></li>
+    <li><a href="seguimiento.html"><i class="fas fa-calendar-alt"></i>SEGUIMIENTO</a></li>
+    <li><a href="comunidad.php"><i class="far fa-comments"></i>COMUNIDAD</a></li>
+    <li><a href="#about"><i class="fas fa-users"></i>SOBRE NOSOTROS</a></li>
+  </ul>
+</div>
+ <section></section>
+        <div class="textos">
+            <h1>FUMADORES ANONIMOS</h1>
+            <h2>"Para una vida sin tabaco."</h2>
+        </div>
+    </header>
+
+    <script src="../js/menu_main.js"></script>
+    
+    <article class="tabaco-area" id="about">
+		<div class="calendar" data-color="normal">
+			<?php
+			/* BUSCAMOS EVENTOS */
+			$query_eventos=$db->query("select id,fecha,evento from tcalendario where 1 order by fecha asc");
+			if ($eventos=$query_eventos->fetch_array())
+			{
+				do
+				{
+				?>
+				<div data-role="day" data-day="<?php $fecha=explode("-",$eventos["fecha"]); echo $fecha[0].intval($fecha[1]).intval($fecha[2]); ?>">
+					<div data-role="event" data-idevento="<?php echo $eventos["id"]; ?>" data-name="<?php echo utf8_encode($eventos["evento"]); ?>"></div>
+				</div>
+				<?php
+				}
+				while($eventos=$query_eventos->fetch_array());
+			}
+			?>
+			<!--<div data-role="day" data-day="<?php echo date("Ynd",mktime(0,0,0,date("m"),date("d")+1,date("Y"))); ?>">
+				<div data-role="event" data-name="Soy un evento que siempre saldr&eacute; ma&ntilde;ana" data-start="9.00" data-end="9.30" data-location="martiniglesias.eu"></div>
+			</div>-->
+		</div>
+	<script>
+	var yy;
+	var calendarArray =[];
+	var monthOffset = [6,7,8,9,10,11,0,1,2,3,4,5];
+	var monthArray = [["ENE","Enero"],["FEB","Febrero"],["MAR","Marzo"],["ABR","Abril"],["MAY","Mayo"],["JUN","Junio"],["JUL","Julio"],["AGO","Agosto"],["SEP","Septiembre"],["OCT","Octubre"],["NOV","Noviembre"],["DIC","Diciembre"]];
+	var letrasArray = ["Lun","Mar","Mie","Jue","Vie","Sab","Dom"];
+	var dayArray = ["7","1","2","3","4","5","6"];
+	$(document).ready(function() 
+	{
+		$(document).on('click','.calendar-day.have-events',activateDay);
+		$(document).on('click','.specific-day',activatecalendar);
+		$(document).on('click','.calendar-month-view-arrow',offsetcalendar);
+		$(window).resize(calendarScale);
+		$(".calendar").calendar({
+			"2013910": {
+				"": {
+					idevento: ""
+				}
+			}
+		});
+		calendarSet();
+		calendarScale();
+		
+		
+		$('body').on('click', '.colorbox', function(e) 
+		{
+			e.preventDefault();
+			$.colorbox({href:$(this).attr('href'), open:true,iframe:true,innerWidth:"600px",innerHeight:"340px",overlayClose:false,onClosed:function() { location.reload(true); } });
+			return false;
+		});
+		
+		
+		
+	});
+	</script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+	<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-266167-20");
+		pageTracker._setDomainName(".martiniglesias.eu");
+		pageTracker._trackPageview();
+	} catch(err) {}</script>
+    </article>
+    
+    <article class="about-area" id="about">
+        <div class="text-part">
+            <h1>SOBRE NOSOTROS</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi sunt est illum distinctio sit eum, ipsam consectetur consequatur corporis nostrum esse quo id delectus et veritatis nam libero mollitia quasi?
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum distinctio blanditiis vel enim asperiores atque ea, ratione. Est hic sapiente quaerat. Asperiores cum officiis labore vitae, minus nostrum rerum neque.</p>
+            <button type="button" class="conoce"><h4>---->CONOCE MAS</h4></button>
+        </div>
+    </article>
+</body>
+</html>

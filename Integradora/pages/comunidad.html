@@ -11,8 +11,8 @@
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
-    <header id="home">
-    <input type="checkbox" id="check">
+   <header id="home">
+            <input type="checkbox" id="check">
     <label for="check">
       <i class="fas fa-bars" id="btn"></i>
       <i class="fas fa-times" id="cancel"></i>
@@ -28,15 +28,51 @@
     <li><a href="#about"><i class="fas fa-users"></i>SOBRE NOSOTROS</a></li>
   </ul>
 </div>
-       
-       
         <div class="textos">
-            <h1>FUMADORES ANONIMOS</h1>
-            <h2>"Para una vida sin tabaco."</h2>
+            <h1>COMUNIDAD</h1>
+            <h2>Siempre hay alguien que nos pueda ayudar.</h2>
         </div>
     </header>
 
     <script src="../js/menu_main.js"></script>
+    
+    
+    <article class="about-area" id="about">
+        <div class="text-part">
+            <form action="procesar_mensaje.php" method="post">
+       <input type="text" name="Titre" placeholder="&#9998; Titre">
+       <input type="date" name="Date" placeholder="&#128197; Date">
+       <textarea name="Text" placeholder="&#9998; Texte"></textarea>
+       <input id="boton" type="submit" value="Publier">
+    </form>
+    
 
-  </body>
+<div class="Principal contenedor">
+      <article>
+        <?PHP
+
+$conexion = mysqli_connect('localhost', 'root', '', 'comentario');
+mysqli_select_db($conexion,"comentario");
+
+if ($conexion)
+{
+	$resultado = mysqli_query($conexion, "SELECT Titre, Date, Text FROM texte");
+	while ($fila = mysqli_fetch_row($resultado))
+	{
+		echo "<B>Titre</B> " . $fila[0] . "; ";
+		echo "<br><B>Date:</B> " . $fila[1] . "; ";
+		echo "<br><B>Text: </B> " . $fila[2] . "; ";
+		echo "<BR>";
+		echo "<br>";
+	}
+}
+
+mysqli_close($conexion);
+
+?>
+      </article>
+    </div>
+        </div>
+    </article>
+</body>
 </html>

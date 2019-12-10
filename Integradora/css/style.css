@@ -34,7 +34,7 @@ General Style
   width: 100%;
   /* vertically align its content */
   display: table;
-  background-image: url(../img/6479cd26d5791b150b7acfbfc5c66e23.jpg);
+  background-image: url(../img/humo.gif);
   overflow: hidden;
 }
 
@@ -44,7 +44,7 @@ General Style
   vertical-align: middle;
   text-align: center;
   padding: 0 5%;
-  background-image: url(../forest.jpg);
+  background-image: url(../img/humo.gif);
     background-size: cover;
     background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
